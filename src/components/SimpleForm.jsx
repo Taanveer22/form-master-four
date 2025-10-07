@@ -9,7 +9,7 @@ const SimpleForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit} className="space-y-3">
-        <h1>Simple Form</h1>
+        <h1 className="text-2xl font-semibold text-blue-600">Simple Form</h1>
         <input type="text" name="name" className="border-2 border-gray-800" />
         <br />
         <input type="email" name="email" className="border-2 border-gray-800" />
