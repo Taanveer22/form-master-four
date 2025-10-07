@@ -1,12 +1,15 @@
 // import SimpleForm from "./components/SimpleForm";
 
-import StateHookForm from "./components/StateHookForm";
+import RefHookForm from "./components/RefHookForm";
+
+// import StateHookForm from "./components/StateHookForm";
 
 function App() {
   return (
     <div className="w-5/6 mx-auto my-10">
       {/* <SimpleForm></SimpleForm> */}
-      <StateHookForm></StateHookForm>
+      {/* <StateHookForm></StateHookForm> */}
+      <RefHookForm></RefHookForm>
     </div>
   );
 }

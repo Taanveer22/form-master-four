@@ -39,6 +39,7 @@ const StateHookForm = () => {
         <input
           onChange={handleNameChange}
           value={name}
+          placeholder="enter your name"
           type="text"
           name="name"
           className="border-2 border-gray-800"
@@ -47,6 +48,7 @@ const StateHookForm = () => {
         <input
           onChange={handleEmailChange}
           value={email}
+          placeholder="enter your email"
           type="email"
           name="email"
           className="border-2 border-gray-800"
@@ -54,6 +56,7 @@ const StateHookForm = () => {
         <br />
         <input
           onChange={handlePasswordChange}
+          placeholder="enter your password"
           type="password"
           name="password"
           className="border-2 border-gray-800"
