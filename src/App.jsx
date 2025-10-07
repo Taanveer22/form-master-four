@@ -1,6 +1,10 @@
 // import SimpleForm from "./components/SimpleForm";
 
-import RefHookForm from "./components/RefHookForm";
+import CustomHookForm2 from "./components/CustomHookForm2";
+
+import CustomHookForm from "./components/CustomHookForm";
+
+// import RefHookForm from "./components/RefHookForm";
 
 // import StateHookForm from "./components/StateHookForm";
 
@@ -9,7 +13,10 @@ function App() {
     <div className="w-5/6 mx-auto my-10">
       {/* <SimpleForm></SimpleForm> */}
       {/* <StateHookForm></StateHookForm> */}
-      <RefHookForm></RefHookForm>
+      {/* <RefHookForm></RefHookForm> */}
+
+      <CustomHookForm></CustomHookForm>
+      <CustomHookForm2></CustomHookForm2>
     </div>
   );
 }

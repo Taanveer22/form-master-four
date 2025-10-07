@@ -1,18 +1,28 @@
 const SimpleForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit btn clicked...............");
     console.log(e.target.name.value);
     console.log(e.target.email.value);
     console.log(e.target.password.value);
+    console.log("submit btn clicked...............");
   };
   return (
     <div>
       <form onSubmit={handleSubmit} className="space-y-3">
         <h1 className="text-2xl font-semibold text-blue-600">Simple Form</h1>
-        <input type="text" name="name" placeholder="enter your name" className="border-2 border-gray-800" />
+        <input
+          type="text"
+          name="name"
+          placeholder="enter your name"
+          className="border-2 border-gray-800"
+        />
         <br />
-        <input type="email" name="email" placeholder="enter your email"className="border-2 border-gray-800" />
+        <input
+          type="email"
+          name="email"
+          placeholder="enter your email"
+          className="border-2 border-gray-800"
+        />
         <br />
         <input
           type="password"

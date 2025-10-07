@@ -1,32 +1,25 @@
-import { useEffect, useRef } from "react";
+import useInputStateReturnArray from "../hooks/useInputStateReturnArray";
 
-const RefHookForm = () => {
-  const nameRef = useRef(null);
-  const emailRef = useRef(null);
-  const passwordRef = useRef(null);
-
-  useEffect(() => {
-    nameRef.current.focus();
-  }, []);
-
+const CustomHookForm = () => {
+  const [name, handleNameChange] = useInputStateReturnArray("rojoni");
+  const [email, handleEmailChange] = useInputStateReturnArray("rojoni@go.com");
+  const [password, handlePasswordChange] = useInputStateReturnArray();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(nameRef);
-    console.log(nameRef.current);
-    console.log(nameRef.current.value);
-    console.log(emailRef.current.value);
-    console.log(passwordRef.current.value);
-    console.log('submitted................');
+    console.log(name);
+    console.log(email);
+    console.log(password);
+    console.log("submited...");
   };
   return (
     <div>
       <form onSubmit={handleSubmit} className="space-y-3">
         <h1 className="text-2xl font-semibold text-blue-600">
-          Ref Hook Uncontrolled Form
+          Custom Hook Form 1 return array
         </h1>
         <input
-          ref={nameRef}
-          defaultValue={"sojoni"}
+          value={name}
+          onChange={handleNameChange}
           type="text"
           name="name"
           placeholder="enter your name"
@@ -34,8 +27,8 @@ const RefHookForm = () => {
         />
         <br />
         <input
-          ref={emailRef}
-          defaultValue={"sojoni@go.com"}
+          value={email}
+          onChange={handleEmailChange}
           type="email"
           name="email"
           placeholder="enter your email"
@@ -43,7 +36,8 @@ const RefHookForm = () => {
         />
         <br />
         <input
-          ref={passwordRef}
+          value={password}
+          onChange={handlePasswordChange}
           type="password"
           name="password"
           placeholder="enter your password"
@@ -56,4 +50,4 @@ const RefHookForm = () => {
   );
 };
 
-export default RefHookForm;
+export default CustomHookForm;
