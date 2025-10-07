@@ -43,6 +43,7 @@ const StateHookForm = () => {
           type="text"
           name="name"
           className="border-2 border-gray-800"
+          autoComplete="given-name"
         />
         <br />
         <input
@@ -52,6 +53,7 @@ const StateHookForm = () => {
           type="email"
           name="email"
           className="border-2 border-gray-800"
+          autoComplete="work email"
         />
         <br />
         <input
@@ -60,6 +62,7 @@ const StateHookForm = () => {
           type="password"
           name="password"
           className="border-2 border-gray-800"
+          autoComplete="current-password"
         />
         <br /> <br />
         <input type="submit" value="Submit Now" className="bg-green-600 p-1" />

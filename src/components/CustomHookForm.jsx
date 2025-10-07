@@ -24,6 +24,7 @@ const CustomHookForm = () => {
           name="name"
           placeholder="enter your name"
           className="border-2 border-gray-800"
+          autoComplete="given-name"
         />
         <br />
         <input
@@ -33,6 +34,7 @@ const CustomHookForm = () => {
           name="email"
           placeholder="enter your email"
           className="border-2 border-gray-800"
+          autoComplete="work email"
         />
         <br />
         <input
@@ -42,6 +44,7 @@ const CustomHookForm = () => {
           name="password"
           placeholder="enter your password"
           className="border-2 border-gray-800"
+          autoComplete="current-password"
         />
         <br /> <br />
         <input type="submit" value="Submit Now" className="bg-green-600 p-1" />

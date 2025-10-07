@@ -1,15 +1,18 @@
-const SimpleForm = () => {
-  const handleSubmit = (e) => {
+const ReusableForm = ({ formTitle, submitBtnText, handleSubmit, children }) => {
+  const handleLocalSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.name.value);
-    console.log(e.target.email.value);
-    console.log(e.target.password.value);
-    console.log("submit btn clicked...............");
+    const data = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      password: e.target.password.value,
+    };
+    handleSubmit(data);
   };
   return (
     <div>
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <h1 className="text-2xl font-semibold text-blue-600">Simple Form</h1>
+      <form onSubmit={handleLocalSubmit} className="space-y-3">
+        <h1 className="text-2xl font-semibold text-blue-600">{formTitle}</h1>
+        {children}
         <input
           type="text"
           name="name"
@@ -34,10 +37,14 @@ const SimpleForm = () => {
           autoComplete="current-password"
         />
         <br /> <br />
-        <input type="submit" value="Submit Now" className="bg-green-600 p-1" />
+        <input
+          value={submitBtnText}
+          type="submit"
+          className="bg-green-600 p-1"
+        />
       </form>
     </div>
   );
 };
 
-export default SimpleForm;
+export default ReusableForm;
