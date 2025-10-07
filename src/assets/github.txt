@@ -1,0 +1,11 @@
+echo "# form-master-four" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/Taanveer22/form-master-four.git
+git push -u origin master
+
+git remote add origin https://github.com/Taanveer22/form-master-four.git
+git branch -M master
+git push -u origin master
